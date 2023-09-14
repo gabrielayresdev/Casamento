@@ -1,25 +1,72 @@
+import React from "react";
 import NavLi from "./NavLi";
+
 import Logo from "/src/assets/logo.png";
+import bars from "/src/assets/icons/bars-solid.svg";
+
+import styles from "./Menu.module.sass";
 
 const Menu = () => {
+  const [active, setActive] = React.useState<boolean>(false);
+
+  const handleMenu: React.MouseEventHandler<HTMLElement> = ({
+    target,
+    currentTarget,
+  }) => {
+    if (target === currentTarget) setActive(false);
+  };
+
+  const closeMenu = () => {
+    setActive(false);
+  };
+
+  React.useEffect(() => {
+    if (active) {
+      document.body.style.overflowY = "hidden";
+    } else document.body.removeAttribute("style");
+  }, [active]);
+
   return (
-    <div className="flex items-center justify-between w-full lg:px-containerDesktop bg-c1 h-[5.8rem] ">
-      <h1 className="h-full py-1">
-        <img src={Logo} alt="Logo da empresa" className="h-full" />
+    <header className={styles.header}>
+      <h1>
+        <img src={Logo} alt="Logo da empresa" />
       </h1>
-      <nav className="h-full">
-        <ul className="flex gap-10 h-full">
-          <NavLi address="/">Inicio</NavLi>
-          <NavLi address="/local">local</NavLi>
-          <NavLi address="/fotos">Fotos</NavLi>
-          <NavLi address="/videos">Vídeos</NavLi>
-          <NavLi address="/" section="depoimentos">
-            Depoimentos
-          </NavLi>
-          <NavLi address="/contato">Contato</NavLi>
-        </ul>
+      <nav>
+        <div
+          className={styles.menuControlls}
+          onClick={() => setActive((current) => !current)}
+        >
+          <img src={bars} alt="Abrir modal" className="" />
+        </div>
+        <div
+          onClick={handleMenu}
+          className={`${styles.navListContainer} ${
+            active ? styles.active : ""
+          }`}
+        >
+          <ul className={styles.navList}>
+            <NavLi address="/" handleClick={closeMenu}>
+              Inicio
+            </NavLi>
+            <NavLi address="/local" handleClick={closeMenu}>
+              local
+            </NavLi>
+            <NavLi address="/fotos" handleClick={closeMenu}>
+              Fotos
+            </NavLi>
+            <NavLi address="/videos" handleClick={closeMenu}>
+              Vídeos
+            </NavLi>
+            <NavLi address="/" section="depoimentos" handleClick={closeMenu}>
+              Depoimentos
+            </NavLi>
+            <NavLi address="/contato" handleClick={closeMenu}>
+              Contato
+            </NavLi>
+          </ul>
+        </div>
       </nav>
-    </div>
+    </header>
   );
 };
 

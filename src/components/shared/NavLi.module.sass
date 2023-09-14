@@ -1,0 +1,48 @@
+@import '/src/variables'
+    
+.listItem 
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    .NavLi 
+        color: #efefef
+        font-size: 1.5rem
+        outline: none
+        text-decoration: none
+        padding: 1rem 0
+
+
+        &:hover::after
+            opacity: 1
+            width: 100%
+
+        &::after 
+            content: ''
+            width: 1px 
+            height: 2px
+            opacity: 0
+            background: #efefef
+            display: block
+            bottom:0
+            position: absolute
+            transition: all .3s
+            
+        &.active 
+            &::after 
+                width: 100%
+                opacity: 1
+                background: #ffffff
+    @media screen and ( max-width: $tabletBreakpoint )
+        width: min-content
+
+        .NavLi 
+            &:hover::after  
+                opacity: 0
+            &.active 
+                &::after 
+                    opacity: 1
+
+    
