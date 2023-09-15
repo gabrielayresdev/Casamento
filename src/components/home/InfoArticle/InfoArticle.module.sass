@@ -1,3 +1,5 @@
+@import '/src/variables'
+    
 .article 
     display: grid
     grid-template-columns: 1fr 1fr 
@@ -7,3 +9,11 @@
         width: 100%
         object-fit: cover
         object-position: center
+
+    @media (max-width: $mobileBreakpoint)
+        grid-template-columns: 1fr
+
+        img 
+            grid-row: 1
+
+    
