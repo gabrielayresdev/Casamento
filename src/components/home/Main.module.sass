@@ -1,0 +1,104 @@
+@import '/src/variables'
+    
+.main 
+    height: calc( 100vh - 5.8rem )
+    width: 100%
+
+    
+
+    // Effects on bg-image
+    position: relative
+    &::after
+        content: ''
+        width: 100%
+        height: 100%
+        position: absolute
+
+        background-image: url('/src/assets/pages_images/michael-twiss-jr-OzHWsXP833A-unsplash.jpg') 
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        z-index: -1
+
+        box-shadow: inset 100vw 100vh rgba(0, 0, 0, .15)
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: 4rem
+
+    color: #fff
+    text-align: center
+
+    .title 
+        font-size: 4rem
+        font-weight: 600
+        max-width: 30ch
+
+    .paragraph 
+        font-size: 1.5rem
+        font-weight: 600
+        max-width: 90ch
+        
+    .button 
+        margin-top: 1rem
+
+        font-size: 2rem
+        font-weight: 500
+        line-height: 1
+
+        text-decoration: none
+        
+        background-color: #016064
+        color: #fff
+
+        cursor: pointer
+        border-radius: .5rem
+        overflow: hidden
+
+        display: flex
+        align-items: center
+        gap: 2rem
+        transition: all .3s
+
+        &:hover 
+            background-color: #0e686b
+            .squareDetail 
+                background-color: #dfc05c
+
+        .text 
+            padding: 1.5rem 0 1.5rem 2rem
+
+        .squareDetail
+            width: 3.5rem
+            height: 100%
+            background-color: #d3ab28
+
+
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: all .3s
+
+            img 
+                max-width: 22px
+
+    @media (max-width: $mobileBreakpoint)
+        height: auto
+        padding: 5rem 1rem
+        min-height: calc( 100vh - 5.8rem )
+
+        gap: 1.25rem
+        .title 
+            font-size: 1.5rem
+        .paragraph 
+            font-size: .875rem
+
+        .button
+            font-size: 1rem
+
+            .text 
+                padding: 1rem 0 1rem 1.25rem 
+            .squareDetail 
+                padding:  1rem 0
