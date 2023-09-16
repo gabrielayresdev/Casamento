@@ -126,7 +126,7 @@ const Testimonials = () => {
       <Swiper
         slidesPerView={isMobile ? 1 : 2}
         autoplay={{
-          delay: 250000,
+          delay: 2500,
           disableOnInteraction: false,
         }}
         pagination={{

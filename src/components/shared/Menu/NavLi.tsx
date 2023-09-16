@@ -14,7 +14,7 @@ const NavLi = ({ children, address, section, handleClick }: INavLi) => {
     <li className={styles.listItem}>
       <NavHashLink
         to={`${address}${section ? `#${section}` : ""}`}
-        className={({ isActive }) => {
+        className={({ isActive }: { isActive: boolean }) => {
           return `${styles.NavLi} ${isActive && !section ? styles.active : ""}`;
         }}
         smooth

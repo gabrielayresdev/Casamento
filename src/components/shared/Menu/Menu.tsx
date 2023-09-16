@@ -60,7 +60,6 @@ const Menu = () => {
             <NavLi address="/" section="depoimentos" handleClick={closeMenu}>
               Depoimentos
             </NavLi>
-            <a href="#depoimentos">Dep</a>
             <NavLi address="/contato" handleClick={closeMenu}>
               Contato
             </NavLi>

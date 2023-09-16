@@ -1,10 +1,11 @@
 import Main from "../components/home/Main/Main";
 import Info from "../components/home/InfoArticle/InfoIndex";
+import Testimonials from "../components/home/Testimonials/Testimonials";
+import Footer from "../components/shared/Footer/Footer";
 
 import ImgSobre from "/src/assets/pages_images/image 1.png";
 import ImgEventos from "/src/assets/pages_images/image 2.png";
 import ImgServicos from "/src/assets/pages_images/image 4.png";
-import Testimonials from "../components/home/Testimonials/Testimonials";
 
 const Homepage = () => {
   return (
@@ -33,6 +34,7 @@ const Homepage = () => {
       </Info.Article>
 
       <Testimonials />
+      <Footer />
     </>
   );
 };
