@@ -18,6 +18,9 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Testimonials = () => {
+  const [isMobile, setIsMobile] = React.useState(
+    () => window.innerWidth < 1024
+  );
   const testimonialsList = [
     {
       name: "Renata G.",
@@ -99,6 +102,20 @@ const Testimonials = () => {
     },
   ];
 
+  window.addEventListener("resize", () => {
+    defineSliderSettings();
+  });
+
+  function defineSliderSettings() {
+    const width = window.innerWidth;
+
+    if (width < 1024 && !isMobile) {
+      setIsMobile(true);
+    } else if (width > 1024 && isMobile) {
+      setIsMobile(false);
+    }
+  }
+
   return (
     <article className={styles.testimonials}>
       <h2 className={styles.title}>Depoimentos</h2>
@@ -107,16 +124,16 @@ const Testimonials = () => {
       </p>
 
       <Swiper
-        slidesPerView={2}
+        slidesPerView={isMobile ? 1 : 2}
         autoplay={{
-          delay: 2500,
+          delay: 250000,
           disableOnInteraction: false,
         }}
         pagination={{
           dynamicBullets: true,
           clickable: true,
         }}
-        navigation={true}
+        navigation={!isMobile}
         modules={[Autoplay, Pagination, Navigation]}
         className={`mySwiper ${styles.slider}`}
       >

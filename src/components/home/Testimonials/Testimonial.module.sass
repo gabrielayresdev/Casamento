@@ -1,3 +1,5 @@
+@import '/src/variables'
+    
 .card 
     display: flex
     gap: 2.5rem
@@ -48,4 +50,77 @@
 
             margin-left: 5px
         
+    @media  ( max-width: 1800px) and (min-width: $tabletBreakpoint )
+        padding: 1.5rem
+        gap: 1rem
+
+        .profilePic 
+            width: 4rem
+            height: 4rem
+
+        .comment 
+            font-size: 1rem
+            max-width: 30ch
+
+            &::before 
+                width: 17px
+                height: 17px
+                margin: 0
+                margin-right: 2px
+                transform: translateY(-2px)
+            &::after 
+                width: 17px
+                height: 17px
+                margin: 0
+
+    @media  ( max-width: $mobileBreakpoint)
+        padding: 1.5rem
+        gap: 1rem
+
+        .profilePic 
+            width: 4rem
+            height: 4rem
+
+        .comment 
+            font-size: 1rem
+            max-width: 30ch
+
+            &::before 
+                width: 17px
+                height: 17px
+                margin: 0
+                margin-right: 2px
+                transform: translateY(-2px)
+            &::after 
+                width: 17px
+                height: 17px
+                margin-left: 4px
+    @media  ( max-width: 480px)
+        flex-direction: column
+        align-items: center
+        padding: 0 .5rem .5rem
+        gap: 0
+        margin: 1rem
+        .profilePic 
+            transform: translateY(-50%)
+
+        .text 
+            display: grid
+            gap: 1rem
+
+            .comment 
+                line-height: 1.1
+                &::before 
+                    width: 14px
+                    height: 14px
+                    margin: 0
+                    margin-right: 2px
+                    transform: translateY(-2px)
+                &::after 
+                    width: 14px
+                    height: 14px
+            
+            .name 
+                grid-row: 1
+                justify-self: center
             
