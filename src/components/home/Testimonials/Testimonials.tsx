@@ -117,7 +117,7 @@ const Testimonials = () => {
   }
 
   return (
-    <article className={styles.testimonials}>
+    <article className={styles.testimonials} id="depoimentos">
       <h2 className={styles.title}>Depoimentos</h2>
       <p className={styles.paragraph}>
         Veja o que nossos clientes dizem sobre nosso serviço

@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+/* import { NavLink } from "react-router-dom"; */
+import { NavHashLink } from "react-router-hash-link";
 import styles from "./NavLi.module.sass";
 
 interface INavLi extends React.PropsWithChildren {
@@ -8,17 +9,19 @@ interface INavLi extends React.PropsWithChildren {
 }
 
 const NavLi = ({ children, address, section, handleClick }: INavLi) => {
+  console.log(`${address}${section ? `#${section}` : ""}`);
   return (
     <li className={styles.listItem}>
-      <NavLink
+      <NavHashLink
         to={`${address}${section ? `#${section}` : ""}`}
         className={({ isActive }) => {
           return `${styles.NavLi} ${isActive && !section ? styles.active : ""}`;
         }}
+        smooth
         onClick={handleClick}
       >
         {children}
-      </NavLink>
+      </NavHashLink>
     </li>
   );
 };
