@@ -120,8 +120,8 @@ const Testimonials = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className={`mySwiper ${styles.slider}`}
       >
-        {testimonialsList.map((item) => (
-          <SwiperSlide>
+        {testimonialsList.map((item, index) => (
+          <SwiperSlide key={index}>
             <Testimonial
               name={item.name}
               comments={item.comments}
