@@ -1,0 +1,51 @@
+.card 
+    display: flex
+    gap: 2.5rem
+    padding: 2.25rem
+    border-radius: .5rem
+    background: #fff
+    
+
+    .profilePic 
+        width: 6.25rem
+        height: 6.25rem
+        border-radius: 50%
+        overflow: hidden
+
+        img
+            width: 100%
+
+    .text 
+        display: flex
+        flex-direction: column
+        gap: 2.5rem
+        
+        max-width: 34ch
+        font-size: 1.5rem
+        
+        font-family: 'Rubik', sans-serif
+
+    .comment
+        &::before 
+            content: ''
+            width: 22px
+            height: 22px
+            background-image: url('src/assets/pages_images/colls.png')
+            background-size: contain
+            background-repeat: no-repeat
+            display: inline-block
+
+            transform: rotate(180deg)
+            margin: 0 5px 5px 0
+        &::after 
+            content: ''
+            width: 22px
+            height: 22px
+            background-image: url('src/assets/pages_images/colls.png')
+            background-size: contain
+            background-repeat: no-repeat
+            display: inline-block
+
+            margin-left: 5px
+        
+            

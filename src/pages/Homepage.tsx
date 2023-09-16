@@ -1,9 +1,10 @@
-import Main from "../components/home/Main";
+import Main from "../components/home/Main/Main";
 import Info from "../components/home/InfoArticle/InfoIndex";
 
 import ImgSobre from "/src/assets/pages_images/image 1.png";
 import ImgEventos from "/src/assets/pages_images/image 2.png";
 import ImgServicos from "/src/assets/pages_images/image 4.png";
+import Testimonials from "../components/home/Testimonials/Testimonials";
 
 const Homepage = () => {
   return (
@@ -30,6 +31,8 @@ const Homepage = () => {
           text="Contamos com a colaboração de uma equipe comprometida com o sucesso dos eventos realizados na Casa. Todos os detalhes da sua festa são executados por pessoas altamente capacitadas e motivadas. Os principais serviços relacionam-se à locação do nosso Espaço, à Gastronomia oferecida pelo Buffet Le Festy e à Decoração dos ambientes em diversos estilos."
         />
       </Info.Article>
+
+      <Testimonials />
     </>
   );
 };
