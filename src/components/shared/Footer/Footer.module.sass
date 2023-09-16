@@ -1,0 +1,48 @@
+.footer 
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    background: #0D0D0D
+    padding: 4rem 10%
+
+    .contact 
+        font-size: 1.25rem
+        color: #BBBBBB
+
+        display: flex
+        gap: 4rem
+        align-items: center
+
+        .whatsapp 
+            display: flex
+            flex-direction: column
+            gap: .75rem
+            .number 
+                display: flex
+                align-items: center
+                gap: 1rem
+
+                img 
+                    max-height: 2.5rem
+
+        .detail 
+            display: block
+            height: 8rem
+            width: 2px
+            background: #BBBBBB
+        .socialNetwork 
+            display: flex
+            flex-direction: column
+            gap: .75rem
+
+            .socialNetworkIcons
+                display: flex
+                align-items: center
+                justify-content: space-between
+                img
+                    max-height: 3rem
+                    transition: all .3s
+
+                    &:hover 
+                        transform: scale(1.2)
