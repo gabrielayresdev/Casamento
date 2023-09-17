@@ -9,7 +9,6 @@ interface INavLi extends React.PropsWithChildren {
 }
 
 const NavLi = ({ children, address, section, handleClick }: INavLi) => {
-  console.log(`${address}${section ? `#${section}` : ""}`);
   return (
     <li className={styles.listItem}>
       <NavHashLink
