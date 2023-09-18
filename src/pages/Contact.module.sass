@@ -1,3 +1,5 @@
+@import 'src/variables'
+    
 .container
     flex: 1
     background: #E3DECC
@@ -11,6 +13,7 @@
         align-items: flex-start 
         gap: 12rem
         width: 60%
+        margin-bottom: 3rem
 
        
 
@@ -61,3 +64,19 @@
 
             input:first-of-type 
                 margin: 0
+        @media (max-width: $tabletBreakpoint)
+            grid-template-columns: 1fr
+            gap: 3rem
+            width: 70%
+
+
+        @media (max-width: $mobileBreakpoint)
+            width: 95%
+
+            .leftSide 
+                .title 
+                    text-align: center
+                    margin-top: 2rem
+
+                .paragraph 
+                    text-align: center
