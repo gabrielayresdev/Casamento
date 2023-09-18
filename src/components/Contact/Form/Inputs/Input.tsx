@@ -1,3 +1,4 @@
+import { ChangeEvent } from "react";
 import styles from "./Input.module.sass";
 
 interface IInput extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -5,7 +6,7 @@ interface IInput extends React.InputHTMLAttributes<HTMLInputElement> {
   type?: string;
   name: string;
   value: string;
-  setValue: React.Dispatch<React.SetStateAction<string>>;
+  onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
 const Input = ({
@@ -13,7 +14,8 @@ const Input = ({
   type = "text",
   name,
   value,
-  setValue,
+  onBlur,
+  onChange,
   ...rest
 }: IInput) => {
   return (
@@ -26,7 +28,7 @@ const Input = ({
         type={type}
         name={name}
         value={value}
-        onChange={({ target }) => setValue(target.value)}
+        onChange={onChange}
         {...rest}
       />
     </div>

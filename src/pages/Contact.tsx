@@ -1,4 +1,4 @@
-import React, { FormEventHandler } from "react";
+import React from "react";
 import Form from "../components/Contact/Form/FormIndex";
 import emailjs from "@emailjs/browser";
 
@@ -6,12 +6,32 @@ import WhatsappIcon from "/src/assets/shared/whatsapp.png";
 import EmailIcon from "/src/assets/shared/envelope-regular.svg";
 
 import styles from "./Contact.module.sass";
+import useForm from "../hooks/useForm";
 
 const Contact = () => {
-  const [nome, setNome] = React.useState<string>("");
+  const nome = useForm("notNull");
+  const email = useForm("email");
+  const message = useForm(false);
+  const date = useForm("date");
+  const [showErrors, setShowErrors] = React.useState<boolean>(false);
 
-  const handleSubmit = (e: FormEventHandler<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log(
+      !nome.validate(),
+      !email.validate(),
+      !message.validate(),
+      !date.validate()
+    );
+    if (
+      !nome.validate() ||
+      !email.validate() ||
+      !message.validate() ||
+      !date.validate()
+    ) {
+      setShowErrors(true);
+      return;
+    }
     if (formRef.current)
       emailjs
         .sendForm(
@@ -22,7 +42,11 @@ const Contact = () => {
         )
         .then(
           (result) => {
-            console.log(result.text);
+            nome.setValue("");
+            email.setValue("");
+            message.setValue("");
+            date.setValue("");
+            setShowErrors(false);
           },
           (error) => {
             console.log(error.text);
@@ -61,24 +85,34 @@ const Contact = () => {
           <Form.Input
             label="nome"
             name="from_name"
-            value={nome}
-            setValue={setNome}
+            value={nome.value}
+            onChange={nome.onChange}
           />
+          {showErrors && <span className={styles.error}>{nome.error}</span>}
+
           <Form.Input
             label="email"
             type="email"
             name="from_email"
-            value={nome}
-            setValue={setNome}
+            value={email.value}
+            onChange={email.onChange}
           />
-          <Form.Date />
+          {showErrors && <span className={styles.error}>{email.error}</span>}
+          <Form.Date
+            value={date.value}
+            setValue={date.setValue}
+            validate={date.validate}
+            name="date"
+          />
+          {showErrors && <span className={styles.error}>{date.error}</span>}
           <Form.Textarea
             label="Mensagem"
-            name="from_message"
-            value={nome}
-            setValue={setNome}
+            name="message"
+            value={message.value}
+            onChange={message.onChange}
           />
           <Form.Button />
+          {showErrors && <span className={styles.error}>{message.error}</span>}
         </Form.Form>
       </div>
     </div>

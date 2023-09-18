@@ -1,18 +1,9 @@
-import React, { FormEventHandler } from "react";
-import emailjs from "@emailjs/browser";
+import React from "react";
 
 interface IFormRoot extends React.PropsWithChildren {
   className: string;
-  handleSubmit: (e: FormEventHandler<HTMLFormElement>) => void;
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
-
-/* const FormRoot = ({ children, className, handleSubmit }: IFormRoot) => {
-  return (
-    <form className={className} onSubmit={handleSubmit}>
-      {children}
-    </form>
-  );
-}; */
 
 const FormRoot = React.forwardRef<HTMLFormElement, IFormRoot>(
   ({ children, className, handleSubmit }, ref) => (

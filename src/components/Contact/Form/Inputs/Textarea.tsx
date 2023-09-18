@@ -4,10 +4,13 @@ interface IInput extends React.InputHTMLAttributes<HTMLTextAreaElement> {
   label: string;
   value: string;
   name: string;
-  setValue: React.Dispatch<React.SetStateAction<string>>;
+  onChange: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
+  onBlur?: () => boolean | undefined;
 }
 
-const Textarea = ({ label, name, value, setValue, ...rest }: IInput) => {
+const Textarea = ({ label, name, value, onChange, ...rest }: IInput) => {
   return (
     <div className={styles.inputContainer}>
       <label className={styles.label} htmlFor={label}>
@@ -15,9 +18,9 @@ const Textarea = ({ label, name, value, setValue, ...rest }: IInput) => {
       </label>
       <textarea
         className={styles.input}
-        name={name}
         value={value}
-        onChange={({ target }) => setValue(target.value)}
+        name={name}
+        onChange={onChange}
         {...rest}
       />
     </div>
