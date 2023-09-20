@@ -2,7 +2,7 @@
 
 ## Sobre
 
-O Les Noces é uma SPA(Single Page Application) desenvolvida para um salão de festas fictício que tem como foco eventos de casamento. O projeto foi desenvolvido utilizando React, Typescript e Sass. No projeto é possível navegar entre três página diferentes: homepage, página de contato e uma galeria de fotos.
+O Les Noces é uma SPA(Single Page Application) desenvolvida para um salão de festas fictício que tem como foco eventos de casamento. O projeto foi desenvolvido utilizando React, Typescript e Sass. No projeto é possível navegar entre três páginas diferentes: homepage, página de contato e uma galeria de fotos.
 
 Caso queira utilizar o site, acesse https://lesnoces.vercel.app
 
@@ -22,7 +22,7 @@ As principais funcionalidades são:
 
 - Comportamento de Single Page Application.
 - Validação de formulário.
-- Envio de emails ao completar o formulário.
+- Envio de e-mails ao completar o formulário.
 - Paginação da galeria de fotos.
 - Carousel com depoimentos de clientes.
 - Campos de input personalizados.
