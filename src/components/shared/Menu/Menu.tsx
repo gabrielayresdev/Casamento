@@ -51,10 +51,10 @@ const Menu = () => {
             <NavLi address="/local" handleClick={closeMenu}>
               local
             </NavLi>
-            <NavLi address="/fotos" handleClick={closeMenu}>
+            <NavLi address="/midia" handleClick={closeMenu}>
               Fotos
             </NavLi>
-            <NavLi address="/videos" handleClick={closeMenu}>
+            <NavLi address="/midia" handleClick={closeMenu}>
               Vídeos
             </NavLi>
             <NavLi address="/" section="depoimentos" handleClick={closeMenu}>

@@ -4,6 +4,7 @@ import Menu from "./components/shared/Menu/Menu";
 import Contact from "./pages/Contact";
 
 import "./app.sass";
+import MidiaPage from "./pages/MidiaPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/contato" element={<Contact />} />
+          <Route path="/midia" element={<MidiaPage />} />
         </Routes>
       </BrowserRouter>
     </div>
