@@ -18,7 +18,7 @@ const Footer = () => {
           <p>Mande uma mensagem</p>
           <div className={styles.number}>
             <img src={WhatsappIcon} />
-            (21) 98704-3948
+            (21) 90123-4567
           </div>
         </div>
         <span className={styles.detail}></span>

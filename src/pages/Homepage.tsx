@@ -15,13 +15,13 @@ const Homepage = () => {
         <img src={ImgSobre} />
         <Info.Text
           title="sobre"
-          text="A Casa de Festas Le Festy abriu as suas portas em 2003 e rapidamente tornou-se uma referência de qualidade, inovação e excelência de atendimento. O principal foco da equipe é colaborar com os clientes para a concretização dos seus sonhos, realizando um evento organizado e agradável, tornando o dia realmente inesquecível! Na Le Festy realiza-se orçamentos personalizados, adaptando-se às necessidades, gostos e preferências diversas, além disso, são proporcionadas facilidades de pagamento com parcelamento."
+          text="Com uma trajetória de 12 anos de excelência, o Les Noces é um nome consagrado no cenário de casamentos no Rio de Janeiro. Nossa história é marcada por inúmeros momentos mágicos e sorrisos radiantes, e estamos ansiosos para compartilhar essa expertise e paixão com você. Desde o início, nossa missão tem sido criar casamentos verdadeiramente memoráveis, onde cada detalhe é cuidadosamente planejado para refletir a singularidade de cada casal. Ao longo dos anos, conquistamos a confiança de inúmeros noivos e noivas, tornando-se o local preferido para aqueles que buscam uma combinação de elegância, sofisticação e calor humano."
         />
       </Info.Article>
       <Info.Article>
         <Info.Text
           title="Eventos Sociais, Corporativos e Educacionais"
-          text="A Casa de Festas Le Festy abriu as suas portas em 2003 e rapidamente tornou-se uma referência de qualidade, inovação e excelência de atendimento. O principal foco da equipe é colaborar com os clientes para a concretização dos seus sonhos, realizando um evento organizado e agradável, tornando o dia realmente inesquecível! Na Le Festy realiza-se orçamentos personalizados, adaptando-se às necessidades, gostos e preferências diversas, além disso, são proporcionadas facilidades de pagamento com parcelamento."
+          text="No Les Noces, nossa missão é criar momentos especiais e memoráveis, não apenas para casamentos, mas também para uma ampla variedade de eventos sociais, corporativos e educacionais. Acreditamos que cada celebração merece a mesma atenção meticulosa aos detalhes e o toque de elegância que nos tornou conhecidos. Seja qual for a natureza do seu evento, estamos prontos para torná-lo extraordinário."
         />
         <img src={ImgEventos} />
       </Info.Article>
@@ -29,7 +29,7 @@ const Homepage = () => {
         <img src={ImgServicos} />
         <Info.Text
           title="Serviços"
-          text="Contamos com a colaboração de uma equipe comprometida com o sucesso dos eventos realizados na Casa. Todos os detalhes da sua festa são executados por pessoas altamente capacitadas e motivadas. Os principais serviços relacionam-se à locação do nosso Espaço, à Gastronomia oferecida pelo Buffet Le Festy e à Decoração dos ambientes em diversos estilos."
+          text="No Les Noces, nossa dedicação ao sucesso do seu evento é incomparável. Contamos com uma equipe altamente capacitada e motivada, pronta para executar todos os detalhes com maestria. Nossos serviços abrangem a locação do nosso espaço, a excelência da gastronomia proporcionada pelo Buffet Les Noces e a transformação dos ambientes com decoração em diversos estilos."
         />
       </Info.Article>
 

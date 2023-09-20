@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "./Testimonials.module.sass";
 
-import Pic1 from "/src/assets/pages_images/image 3.png";
-import Pic2 from "/src/assets/pages_images/image 5.png";
+import Pic1 from "/src/assets/pages_images/pic1.jpg";
+import Pic2 from "/src/assets/pages_images/pic2.jpg";
+import Pic3 from "/src/assets/pages_images/pic3.jpg";
+import Pic4 from "/src/assets/pages_images/pic4.png";
+import Pic5 from "/src/assets/pages_images/pic5.png";
 import Testimonial from "./Testimonial";
 
 // Imports for carousel:
@@ -23,82 +26,29 @@ const Testimonials = () => {
   );
   const testimonialsList = [
     {
-      name: "Renata G.",
-      comments: `Ótimo lugar, ótimos preços, pessoas
-    comprometidas, sem falar no visual que é
-    muito sofisticado, com um cascata, ambiente climatizado, recomendo a todas as noivinhas.
-     Casamento é um dos momentos mais
-    importantes na vida de uma mulher, não faça
-    em qualquer ambiente, antes de qualquer
-    coisa certifique-se de que está fazendo no
-    melhor lugar, não vá por preço, porque muitas
-    vezes o barato sai caro`,
-      image: Pic1,
-    },
-    {
-      name: "Renata G.",
-      comments: `Ótimo lugar, ótimos preços, pessoas
-    comprometidas, sem falar no visual que é
-    muito sofisticado, com um cascata, ambiente climatizado, recomendo a todas as noivinhas.
-     Casamento é um dos momentos mais
-    importantes na vida de uma mulher, não faça
-    em qualquer ambiente, antes de qualquer
-    coisa certifique-se de que está fazendo no
-    melhor lugar, não vá por preço, porque muitas
-    vezes o barato sai caro`,
+      name: "Ana e Carlos",
+      comments: `O Le Noces é simplesmente incrível! A equipe fez do nosso casamento um dia mágico. Cada detalhe foi cuidadosamente planejado, desde a decoração deslumbrante até a comida deliciosa do Buffet Les Noces. Não poderíamos estar mais felizes com nossa escolha!`,
       image: Pic2,
     },
     {
-      name: "Renata G.",
-      comments: `Ótimo lugar, ótimos preços, pessoas
-    comprometidas, sem falar no visual que é
-    muito sofisticado, com um cascata, ambiente climatizado, recomendo a todas as noivinhas.
-     Casamento é um dos momentos mais
-    importantes na vida de uma mulher, não faça
-    em qualquer ambiente, antes de qualquer
-    coisa certifique-se de que está fazendo no
-    melhor lugar, não vá por preço, porque muitas
-    vezes o barato sai caro`,
+      name: "João",
+      comments: `Nossa conferência corporativa no Le Noces foi um triunfo. O espaço é elegante e bem equipado, e a equipe de eventos tornou tudo sem esforço. Recebemos elogios dos participantes por semanas após o evento.`,
       image: Pic1,
     },
     {
-      name: "Renata G.",
-      comments: `Ótimo lugar, ótimos preços, pessoas
-    comprometidas, sem falar no visual que é
-    muito sofisticado, com um cascata, ambiente climatizado, recomendo a todas as noivinhas.
-     Casamento é um dos momentos mais
-    importantes na vida de uma mulher, não faça
-    em qualquer ambiente, antes de qualquer
-    coisa certifique-se de que está fazendo no
-    melhor lugar, não vá por preço, porque muitas
-    vezes o barato sai caro`,
-      image: Pic2,
+      name: "Mariana",
+      comments: `O Le Noces transformou meu aniversário em uma festa dos sonhos. A decoração foi deslumbrante, e o ambiente alegre e acolhedor fez todos os convidados se sentirem especiais`,
+      image: Pic3,
+    },
+    {
+      name: " Luiza e André",
+      comments: `Meu casamento no Le Noces foi perfeito. A atenção aos detalhes, desde a cerimônia até a festa, foi incrível. E a comida do Buffet Le Festy foi um grande destaque!`,
+      image: Pic4,
     },
     {
       name: "Renata G.",
-      comments: `Ótimo lugar, ótimos preços, pessoas
-    comprometidas, sem falar no visual que é
-    muito sofisticado, com um cascata, ambiente climatizado, recomendo a todas as noivinhas.
-     Casamento é um dos momentos mais
-    importantes na vida de uma mulher, não faça
-    em qualquer ambiente, antes de qualquer
-    coisa certifique-se de que está fazendo no
-    melhor lugar, não vá por preço, porque muitas
-    vezes o barato sai caro`,
-      image: Pic1,
-    },
-    {
-      name: "Renata G.",
-      comments: `Ótimo lugar, ótimos preços, pessoas
-    comprometidas, sem falar no visual que é
-    muito sofisticado, com um cascata, ambiente climatizado, recomendo a todas as noivinhas.
-     Casamento é um dos momentos mais
-    importantes na vida de uma mulher, não faça
-    em qualquer ambiente, antes de qualquer
-    coisa certifique-se de que está fazendo no
-    melhor lugar, não vá por preço, porque muitas
-    vezes o barato sai caro`,
-      image: Pic2,
+      comments: `Não posso recomendar o Le Noces o suficiente! A comida do Buffet Les Noces é divina, e a equipe tornou nosso evento social tão especial. Definitivamente, meu local favorito no Rio!`,
+      image: Pic5,
     },
   ];
 

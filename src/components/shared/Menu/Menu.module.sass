@@ -15,7 +15,8 @@
 
     // Logo Styles
     h1 
-        height: 100%
+        height: 70%
+        max-height: 5rem
         padding: .25rem 0
         // Logo Image Styles
         img 
@@ -29,6 +30,9 @@
         .menuControlls 
             display: none
             width: 2.5rem
+            height: 100%
+
+            align-items: center
 
 
         // Navigation List Styles
@@ -39,12 +43,11 @@
                 gap: 2.5rem
                 height: 100%
     @media screen and ( max-width: $tabletBreakpoint )
-        height: auto
         padding: 0 3rem
         
         nav 
             .menuControlls
-                display: block
+                display: flex
 
             .navListContainer 
                 height: 100vh
@@ -70,6 +73,15 @@
 
     @media screen and (max-width: $mobileBreakpoint)
         padding: 0 1rem 
+
+        h1 
+            height: auto
+            max-width: 10rem
+            padding: .25rem 0
+            // Logo Image Styles
+            img 
+                width: 100%
+
         nav 
             .navListContainer 
                 .navList 

@@ -36,7 +36,7 @@ const Menu = () => {
           className={styles.menuControlls}
           onClick={() => setActive((current) => !current)}
         >
-          <img src={bars} alt="Abrir modal" className="" />
+          <img src={bars} alt="Abrir e fechar modal" />
         </div>
         <div
           onClick={handleMenu}

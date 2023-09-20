@@ -69,11 +69,11 @@ const Contact = () => {
           <div className={styles.contactInfo}>
             <div className={styles.info}>
               <img src={WhatsappIcon} />
-              (21) 98704-3948
+              (21) 90123-4567
             </div>
             <div className={styles.info}>
               <img src={EmailIcon} />
-              contato@lefesty.com.br
+              contato@lesnoces.com.br
             </div>
           </div>
         </div>

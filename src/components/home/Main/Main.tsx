@@ -9,10 +9,11 @@ const Main = () => {
         Venha comemorar o seu grande dia conosco!
       </h1>
       <p className={styles.paragraph}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo
+        No Les Noces, estamos dedicados a tornar o dia mais importante da sua
+        vida verdadeiramente inesquecível. Com uma combinação de elegância
+        atemporal, instalações de classe mundial e uma equipe experiente e
+        apaixonada, nosso salão de festas para casamentos é o local ideal para
+        celebrar o amor e o compromisso.
       </p>
 
       <Link to="/contato" className={styles.button}>
