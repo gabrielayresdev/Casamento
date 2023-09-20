@@ -14,15 +14,11 @@ const Contact = () => {
   const message = useForm(false);
   const date = useForm("date");
   const [showErrors, setShowErrors] = React.useState<boolean>(false);
+  const [sending, setSending] = React.useState<boolean>(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(
-      !nome.validate(),
-      !email.validate(),
-      !message.validate(),
-      !date.validate()
-    );
+    setSending(true);
     if (
       !nome.validate() ||
       !email.validate() ||
@@ -47,6 +43,7 @@ const Contact = () => {
             message.setValue("");
             date.setValue("");
             setShowErrors(false);
+            setSending(false);
           },
           (error) => {
             console.log(error.text);
@@ -111,7 +108,7 @@ const Contact = () => {
             value={message.value}
             onChange={message.onChange}
           />
-          <Form.Button />
+          <Form.Button disabled={sending} />
           {showErrors && <span className={styles.error}>{message.error}</span>}
         </Form.Form>
       </div>
