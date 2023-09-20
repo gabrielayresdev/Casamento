@@ -1,3 +1,5 @@
+@import '/src/variables'
+
 .feedPhoto 
     display: grid
     grid-template-columns: repeat(3, 1fr)
@@ -25,5 +27,14 @@
             grid-row: span 2
             grid-column: span 2
             
+    @media (max-width: $tabletBreakpoint)
+        width: 70%
+    @media (max-width: $mobileBreakpoint)
+        width: 95%
+        grid-template-columns: 1fr 1fr
 
+        .imageContainer 
+            &:nth-of-type(6n - 5)
+                grid-row: 1 / 1 
+                grid-column: 1 / 1
                 
