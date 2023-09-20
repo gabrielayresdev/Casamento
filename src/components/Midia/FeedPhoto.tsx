@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./FeedPhoto.module.sass";
 import PhotoModal from "./PhotoModal";
+import usePagination from "../../hooks/usePagination";
 
 const FeedPhoto = () => {
   const links = [
@@ -21,6 +22,11 @@ const FeedPhoto = () => {
     "https://images.unsplash.com/photo-1614626446886-c119885157b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1885&q=80",
   ];
 
+  const itemsPerPage = 6;
+  const { page, goNext } = usePagination(
+    Math.ceil(links.length / itemsPerPage)
+  );
+
   const [active, setActive] = React.useState<boolean>(false);
   const [currentPic, setCurrentPic] = React.useState<string>("");
 
@@ -30,10 +36,27 @@ const FeedPhoto = () => {
     } else document.body.removeAttribute("style");
   }, [active]);
 
+  React.useEffect(() => {
+    function loadMore() {
+      if (
+        window.scrollY + window.innerHeight >
+        0.8 * document.body.offsetHeight
+      ) {
+        goNext();
+      }
+    }
+
+    window.addEventListener("scroll", loadMore);
+
+    return () => {
+      window.removeEventListener("scroll", loadMore);
+    };
+  });
+
   return (
     <>
       <div className={styles.feedPhoto}>
-        {links.map((link) => (
+        {links.slice(0, page * itemsPerPage).map((link) => (
           <div
             className={styles.imageContainer}
             onClick={() => {
