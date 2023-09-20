@@ -26,6 +26,7 @@ const Contact = () => {
       !date.validate()
     ) {
       setShowErrors(true);
+      setSending(false);
       return;
     }
     if (formRef.current)
